@@ -1,0 +1,6 @@
+How This Works Together:
+Context Creation: AuthContext is created and initialized.
+State Management: The AuthProvider component uses useState to create a state (blogs) and an updater function (stateBlogs).
+Fetching Data: Once the AuthProvider component mounts, the useEffect hook triggers a data fetch from the API. The fetched data is stored in the blogs state using stateBlogs.
+Providing Data: AuthContext.Provider makes the blogs data available to all its children components by wrapping them and passing blogs via the value prop.
+Consuming Data: Any component that uses the useAuth hook can access the blogs data from the context.
